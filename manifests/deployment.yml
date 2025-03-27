@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: changcuipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: changcuipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: changcuipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: changcuipipelinesjavascriptdocker 
+          image: mycontainerregistrycc28.azurecr.io/changcuipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
